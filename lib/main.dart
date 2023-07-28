@@ -56,12 +56,12 @@ class _MyHomePageState extends State<MyHomePage> {
               ElevatedButton(
                 child: const Text('Sad Trombone'),
                 // TODO: soundname anpassen
-                onPressed: () {_playSound("sadtrombone"); },
+                onPressed: () {_playSound("sadtromboneogg"); },
               ),
               ElevatedButton(
-                child: const Text('Fanfare'),
+                child: const Text('Long Fanfare'),
                 // TODO: soundname anpassen
-                onPressed: () {_playSound("fanfare"); },
+                onPressed: () {_playSound("fanfarelong"); },
               ),
         ],
       ),
