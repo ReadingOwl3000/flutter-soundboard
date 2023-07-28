@@ -58,6 +58,13 @@ class _MyHomePageState extends State<MyHomePage> {
             },
           ),
           ElevatedButton(
+            child: const Text('Todessus'),
+            // TODO: soundname anpassen
+            onPressed: () {
+              _playSound("todessus");
+            },
+          ),
+          ElevatedButton(
             child: const Text('Long Fanfare'),
             // TODO: soundname anpassen
             onPressed: () {
@@ -69,6 +76,13 @@ class _MyHomePageState extends State<MyHomePage> {
             // TODO: soundname anpassen
             onPressed: () {
               _playSound("fanfareshort");
+            },
+          ),
+           ElevatedButton(
+            child: const Text('Slow Clap'),
+            // TODO: soundname anpassen
+            onPressed: () {
+              _playSound("slowclap");
             },
           ),
         ],
