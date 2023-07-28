@@ -63,6 +63,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 // TODO: soundname anpassen
                 onPressed: () {_playSound("fanfarelong"); },
               ),
+              ElevatedButton(
+                child: const Text('Short Fanfare'),
+              // TODO: soundname anpassen
+                onPressed: () {_playSound("fanfareshort"); },
+              ),  
+                
         ],
       ),
     );
