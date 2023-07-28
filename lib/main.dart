@@ -7,7 +7,6 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-  
 
   // This widget is the root of your application.
   @override
@@ -19,8 +18,6 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Totally useful soundboard'),
-       
-         
     );
   }
 }
@@ -38,7 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final _assetsAudioPlayer = AssetsAudioPlayer();
 
   void _playSound(String soundname) {
-    _assetsAudioPlayer.open(Audio("raw/"+soundname));
+    _assetsAudioPlayer.open(Audio("raw/" + soundname));
   }
 
   @override
@@ -49,26 +46,31 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: GridView.count(
-          // Create a grid with 2 columns. If you change the scrollDirection to
-          // horizontal, this produces 2 rows.
-          crossAxisCount: 2,
-          children: [
-              ElevatedButton(
-                child: const Text('Sad Trombone'),
-                // TODO: soundname anpassen
-                onPressed: () {_playSound("sadtromboneogg"); },
-              ),
-              ElevatedButton(
-                child: const Text('Long Fanfare'),
-                // TODO: soundname anpassen
-                onPressed: () {_playSound("fanfarelong"); },
-              ),
-              ElevatedButton(
-                child: const Text('Short Fanfare'),
-              // TODO: soundname anpassen
-                onPressed: () {_playSound("fanfareshort"); },
-              ),  
-                
+        // Create a grid with 2 columns. If you change the scrollDirection to
+        // horizontal, this produces 2 rows.
+        crossAxisCount: 2,
+        children: [
+          ElevatedButton(
+            child: const Text('Sad Trombone'),
+            // TODO: soundname anpassen
+            onPressed: () {
+              _playSound("sadtromboneogg");
+            },
+          ),
+          ElevatedButton(
+            child: const Text('Long Fanfare'),
+            // TODO: soundname anpassen
+            onPressed: () {
+              _playSound("fanfarelong");
+            },
+          ),
+          ElevatedButton(
+            child: const Text('Short Fanfare'),
+            // TODO: soundname anpassen
+            onPressed: () {
+              _playSound("fanfareshort");
+            },
+          ),
         ],
       ),
     );
