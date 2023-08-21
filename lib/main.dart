@@ -50,8 +50,26 @@ class _MyHomePageState extends State<MyHomePage> {
         // horizontal, this produces 2 rows.
         crossAxisCount: 2,
         children: [
+         
+         Column(
+           children: <Widget>[
+             TextButton(
+              onPressed: () {
+                _playSound("sadtromboneogg");
+              },
+              child: Column(
+                children: <Widget>[
+                   Image.asset('assets/img/sadti.png'),
+                   Text('Sad Trombone'),
+                ],
+              ),
+             ),
+            ],
+          ),
+         
           ElevatedButton(
             child: const Text('Sad Trombone'),
+
             // TODO: soundname anpassen
             onPressed: () {
               _playSound("sadtromboneogg");
@@ -60,6 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ElevatedButton(
             child: const Text('Todessus'),
             // TODO: soundname anpassen
+            
             onPressed: () {
               _playSound("todessus");
             },
